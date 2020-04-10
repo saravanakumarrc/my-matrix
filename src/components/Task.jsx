@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './Task.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+
+
 class Task extends Component {
     constructor(props) {
         super(props);
@@ -8,7 +12,9 @@ class Task extends Component {
     render() { 
         return ( 
             <div className="task task-content">
-                { this.props.description }
+                <input type="checkbox" name={ this.props.taskId } value="completed"></input>
+                <label for={ this.props.taskId } className="task-description">{ this.props.description }</label>
+                <FontAwesomeIcon className="task-delete" icon={faTrashAlt} />
             </div>
          );
     }
