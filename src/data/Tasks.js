@@ -32,7 +32,7 @@ let tasks = [
     {
         taskId: 4,
         description: "Pay the current bill",
-        estimate: 30,
+        estimate: 35,
         label: "React & Node",
         order: 4,
         taskGroup: TaskGroups.q1,
@@ -50,7 +50,7 @@ let tasks = [
     {
         taskId: 6,
         description: "Do a mini project on Sass",
-        estimate: 30,
+        estimate: 38,
         label: "React & Node",
         order: 6,
         taskGroup: TaskGroups.q1,

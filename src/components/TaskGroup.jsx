@@ -26,7 +26,7 @@ class TaskGroup extends Component {
 
         return ( 
             <article className="task-group">
-                <TaskGroupHeader name={this.props.taskGroup.name} />
+                <TaskGroupHeader name={this.props.taskGroup.name} id={this.props.taskGroup.id} />
                 { 
                     this.task.map((task) => <Task key={task.taskId} description={task.description} />)
                 }
