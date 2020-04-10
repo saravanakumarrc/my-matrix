@@ -1,0 +1,12 @@
+.task-group {
+    width: calc(2em - 50vw);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1080px) {
+    .task-group {
+        width: calc(2em - 100vw);
+    }
+}

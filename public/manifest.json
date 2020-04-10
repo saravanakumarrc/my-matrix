@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "My Todo App",
+  "name": "My Todo App created using 7 habits of highly effective people",
   "icons": [
     {
       "src": "favicon.ico",
