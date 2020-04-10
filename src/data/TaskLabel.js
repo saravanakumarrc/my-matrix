@@ -1,4 +1,4 @@
-export default TaskLabel = {
+let TaskLabel = {
     family: "family",
     health: "health",
     wealthCreation: "wealth creation",
@@ -10,3 +10,5 @@ export default TaskLabel = {
     react: "react",
     redux: "redux"
 }
+
+export default TaskLabel;

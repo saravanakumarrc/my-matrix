@@ -7,8 +7,8 @@ class Task extends Component {
     }
     render() { 
         return ( 
-            <div className="task">
-                Task
+            <div className="task task-content">
+                { this.props.description }
             </div>
          );
     }

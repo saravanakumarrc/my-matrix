@@ -1,14 +1,14 @@
 import TaskLabel from './TaskLabel';
-import { q1, q2, q3, q4 } from './TaskGroup';
+import TaskGroups from './TaskGroups';
 
-export default tasks = [
+let tasks = [
     {
         taskId: 1,
         description: "Building the todo app",
         estimate: 30,
         label: TaskLabel.continousLearning,
         order: 1,
-        taskGroup: q1,
+        taskGroup: TaskGroups.q1,
         createdOn: new Date()
     },
     {
@@ -17,7 +17,7 @@ export default tasks = [
         estimate: 40,
         label: "React & Node",
         order: 2,
-        taskGroup: q1,
+        taskGroup: TaskGroups.q1,
         createdOn: new Date()
     },
     {
@@ -26,7 +26,7 @@ export default tasks = [
         estimate: 50,
         label: "React & Node",
         order: 3,
-        taskGroup: q1,
+        taskGroup: TaskGroups.q1,
         createdOn: new Date()
     },
     {
@@ -35,7 +35,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 4,
-        taskGroup: q1,
+        taskGroup: TaskGroups.q1,
         createdOn: new Date()
     },
     {
@@ -44,7 +44,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: q1,
+        taskGroup: TaskGroups.q1,
         createdOn: new Date()
     },
     {
@@ -53,7 +53,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 6,
-        taskGroup: q1,
+        taskGroup: TaskGroups.q1,
         createdOn: new Date()
     },
     {
@@ -62,7 +62,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 1,
-        taskGroup: q2,
+        taskGroup: TaskGroups.q2,
         createdOn: new Date()
     },
     {
@@ -71,7 +71,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 2,
-        taskGroup: q2,
+        taskGroup: TaskGroups.q2,
         createdOn: new Date()
     },
     {
@@ -80,7 +80,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 3,
-        taskGroup: q2,
+        taskGroup: TaskGroups.q2,
         createdOn: new Date()
     },
     {
@@ -89,7 +89,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 4,
-        taskGroup: q2,
+        taskGroup: TaskGroups.q2,
         createdOn: new Date()
     },
     {
@@ -98,7 +98,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 4,
-        taskGroup: q1,
+        taskGroup: TaskGroups.q1,
         createdOn: new Date()
     },
     {
@@ -107,7 +107,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: q2,
+        taskGroup: TaskGroups.q2,
         createdOn: new Date()
     },
     {
@@ -116,7 +116,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 1,
-        taskGroup: q3,
+        taskGroup: TaskGroups.q3,
         createdOn: new Date()
     },
     {
@@ -125,7 +125,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 2,
-        taskGroup: q3,
+        taskGroup: TaskGroups.q3,
         createdOn: new Date()
     },
     {
@@ -134,7 +134,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 3,
-        taskGroup: q3,
+        taskGroup: TaskGroups.q3,
         createdOn: new Date()
     },
     {
@@ -143,7 +143,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 4,
-        taskGroup: q3,
+        taskGroup: TaskGroups.q3,
         createdOn: new Date()
     },
     {
@@ -152,7 +152,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: q4,
+        taskGroup: TaskGroups.q4,
         createdOn: new Date()
     },
     {
@@ -161,7 +161,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 6,
-        taskGroup: q4,
+        taskGroup: TaskGroups.q4,
         createdOn: new Date()
     },
     {
@@ -170,7 +170,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 7,
-        taskGroup: q4,
+        taskGroup: TaskGroups.q4,
         createdOn: new Date()
     },
     {
@@ -179,7 +179,7 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 8,
-        taskGroup: q4,
+        taskGroup: TaskGroups.q4,
         createdOn: new Date()
     },
     {
@@ -188,7 +188,9 @@ export default tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: q2,
+        taskGroup: TaskGroups.q2,
         createdOn: new Date()
     },
 ];
+
+export default tasks;
