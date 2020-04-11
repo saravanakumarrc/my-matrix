@@ -6,9 +6,13 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 class Task extends Component {
     render() { 
-        const { task, onTaskCompleted, onTaskRemoved, onDragStart, onDragOver, onDropTask } = this.props;
+        const { task, onTaskCompleted, onTaskRemoved, onDragStart, onDragOver, onDropTask, onDragEnter} = this.props;
         return ( 
-            <div className="task task-content draggable droppable" draggable onDragStart={(e)=> onDragStart(e, task)} droppable="true" onDragOver={(e)=> onDragOver(e)} onDrop={(e)=>{ onDropTask(e, task)}}>
+            <div className="task task-content draggable droppable" 
+                onDragEnter={(e)=> onDragEnter(e, task)} 
+                draggable onDragStart={(e)=> onDragStart(e, task)} 
+                droppable="true" onDragOver={(e)=> onDragOver(e, task)} 
+                onDrop={(e)=>{ onDropTask(e, task)}}>
                 <input type="checkbox" value="completed" onChange={ () => onTaskCompleted(task) }></input>
                 <label className="task-description">{ task.description }</label>
                 <FontAwesomeIcon className="task-delete" icon={faTrashAlt} onClick={() => onTaskRemoved(task)} />

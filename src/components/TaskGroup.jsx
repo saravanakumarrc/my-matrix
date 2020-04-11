@@ -9,14 +9,14 @@ import { convertToHours } from '../utilities/TimeUtility';
 
 class TaskGroup extends Component {
     render() { 
-        const { tasks, taskGroup, onTaskCompleted, onTaskRemoved, onDragStart, onDragOver, onDrop, onDropTask } = this.props;
+        const { tasks, taskGroup, onTaskCompleted, onTaskRemoved, onDragStart, onDragOver, onDrop, onDropTask, onDragEnter } = this.props;
         const filterdTasks = _.filter(tasks,(task) => task.taskGroup === taskGroup);
         const numberOfTasks = filterdTasks.length;
         const totalEstimate = _.sumBy(filterdTasks, (task) => task.estimate);
         const hoursRequired = convertToHours(totalEstimate);
 
         return ( 
-            <article className="task-group droppable" onDragOver={(e)=> onDragOver(e)} onDrop={(e)=>{ onDrop(e, taskGroup)}}>
+            <article className="task-group droppable" onDragEnter={(e)=> onDragOver(e)} onDragOver={(e)=> onDragOver(e)} onDrop={(e)=>{ onDrop(e, taskGroup)}}>
                 <TaskGroupHeader name={this.props.taskGroup.name} id={this.props.taskGroup.id} />
                 { 
                     filterdTasks.map((task) => {
@@ -26,7 +26,8 @@ class TaskGroup extends Component {
                                 onTaskRemoved={onTaskRemoved}
                                 onDragStart={onDragStart}
                                 onDropTask={onDropTask}
-                                onDragOver={onDragOver} />
+                                onDragOver={onDragOver}
+                                onDragEnter={onDragEnter} />
                     })
                 }
                 <TaskGroupFooter numberOfTasks={numberOfTasks} hoursRequired={hoursRequired} />

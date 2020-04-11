@@ -33,11 +33,17 @@ class TaskMatrix extends Component {
 
     handleDragStarted = (ev, task) => {
         console.log('draggingTask', task);
-        this.setState({ draggingTask: task });
+        if(task){
+            this.setState({ draggingTask: task });
+        }        
         //TODO: service call
     }
 
-    handleDragOver = (e) => {
+    handleDragOver = (e, task) => {
+        e.preventDefault();
+    }
+
+    handleDragEnter = (e, task) => {
         e.preventDefault();
     }
 
@@ -67,6 +73,7 @@ class TaskMatrix extends Component {
                                             onDragOver={this.handleDragOver}
                                             onDrop={this.handleDrop}
                                             onDropTask={this.handleDropOnTask}
+                                            onDragEnter={this.handleDragEnter}
                                             />
                     })
                 }
