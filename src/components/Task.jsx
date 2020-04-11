@@ -13,7 +13,7 @@ class Task extends Component {
         return ( 
             <div className="task task-content">
                 <input type="checkbox" name={ this.props.taskId } value="completed"></input>
-                <label for={ this.props.taskId } className="task-description">{ this.props.description }</label>
+                <label className="task-description">{ this.props.description }</label>
                 <FontAwesomeIcon className="task-delete" icon={faTrashAlt} />
             </div>
          );
