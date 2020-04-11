@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
-import TaskGroup from './components/TaskGroup';
-import TaskGroups from './data/TaskGroups';
+import TaskMatrix from './components/TaskMatrix';
 
 function App() {
   return (
@@ -9,11 +8,8 @@ function App() {
       <header className="App-header">
         My matrix heading
       </header>
-      <main className="App-container">      
-        <TaskGroup className="q1" taskGroup={TaskGroups.q1} />
-        <TaskGroup className="q2" taskGroup={TaskGroups.q2} />
-        <TaskGroup className="q3" taskGroup={TaskGroups.q3} />
-        <TaskGroup className="q4" taskGroup={TaskGroups.q4} />            
+      <main className="App-container">
+        <TaskMatrix/>
       </main>
     </div>
   );

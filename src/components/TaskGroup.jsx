@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
-
+import _ from 'lodash';
 import './TaskGroup.scss';
 
-import Task from './Task';
 import TaskGroupHeader from './TaskGroupHeader';
-import TaskServices from '../services/TaskServices';
+import Task from './Task';
 import TaskGroupFooter from './TaskGroupFooter';
-
-import _ from 'lodash';
-
 import { convertToHours } from '../utilities/TimeUtility';
 
 class TaskGroup extends Component {
-    taskService = new TaskServices();
-
-    constructor(props) {
-        super(props);
-        this.state = {  };
-        this.task = this.taskService.getTaskByTaskGroup(props.taskGroup);
-    }
     render() { 
-        const numberOfTasks = this.task.length;
-        const totalEstimate = _.sumBy(this.task, (task) => task.estimate);
+        const { tasks, taskGroup, onTaskCompleted, onTaskRemoved, onDragStart, onDragOver, onDrop, onDropTask } = this.props;
+        const filterdTasks = _.filter(tasks,(task) => task.taskGroup === taskGroup);
+        const numberOfTasks = filterdTasks.length;
+        const totalEstimate = _.sumBy(filterdTasks, (task) => task.estimate);
         const hoursRequired = convertToHours(totalEstimate);
 
         return ( 
-            <article className="task-group">
+            <article className="task-group droppable" onDragOver={(e)=> onDragOver(e)} onDrop={(e)=>{ onDrop(e, taskGroup)}}>
                 <TaskGroupHeader name={this.props.taskGroup.name} id={this.props.taskGroup.id} />
                 { 
-                    this.task.map((task) => <Task key={task.taskId} description={task.description} />)
+                    filterdTasks.map((task) => {
+                        return <Task   key={task.taskId} 
+                                task={task} 
+                                onTaskCompleted={onTaskCompleted}
+                                onTaskRemoved={onTaskRemoved}
+                                onDragStart={onDragStart}
+                                onDropTask={onDropTask}
+                                onDragOver={onDragOver} />
+                    })
                 }
                 <TaskGroupFooter numberOfTasks={numberOfTasks} hoursRequired={hoursRequired} />
             </article>

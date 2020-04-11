@@ -1,6 +1,8 @@
 import TaskLabel from './TaskLabel';
 import TaskGroups from './TaskGroups';
 
+const [ q1, q2, q3, q4 ] = TaskGroups;
+
 let tasks = [
     {
         taskId: 1,
@@ -8,7 +10,7 @@ let tasks = [
         estimate: 30,
         label: TaskLabel.continousLearning,
         order: 1,
-        taskGroup: TaskGroups.q1,
+        taskGroup: q1,
         createdOn: new Date()
     },
     {
@@ -17,7 +19,7 @@ let tasks = [
         estimate: 40,
         label: "React & Node",
         order: 2,
-        taskGroup: TaskGroups.q1,
+        taskGroup: q1,
         createdOn: new Date()
     },
     {
@@ -26,7 +28,7 @@ let tasks = [
         estimate: 50,
         label: "React & Node",
         order: 3,
-        taskGroup: TaskGroups.q1,
+        taskGroup: q1,
         createdOn: new Date()
     },
     {
@@ -35,7 +37,7 @@ let tasks = [
         estimate: 35,
         label: "React & Node",
         order: 4,
-        taskGroup: TaskGroups.q1,
+        taskGroup: q1,
         createdOn: new Date()
     },
     {
@@ -44,7 +46,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: TaskGroups.q1,
+        taskGroup: q1,
         createdOn: new Date()
     },
     {
@@ -53,7 +55,7 @@ let tasks = [
         estimate: 38,
         label: "React & Node",
         order: 6,
-        taskGroup: TaskGroups.q1,
+        taskGroup: q1,
         createdOn: new Date()
     },
     {
@@ -62,7 +64,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 1,
-        taskGroup: TaskGroups.q2,
+        taskGroup: q2,
         createdOn: new Date()
     },
     {
@@ -71,7 +73,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 2,
-        taskGroup: TaskGroups.q2,
+        taskGroup: q2,
         createdOn: new Date()
     },
     {
@@ -80,7 +82,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 3,
-        taskGroup: TaskGroups.q2,
+        taskGroup: q2,
         createdOn: new Date()
     },
     {
@@ -89,7 +91,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 4,
-        taskGroup: TaskGroups.q2,
+        taskGroup: q2,
         createdOn: new Date()
     },
     {
@@ -98,7 +100,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 4,
-        taskGroup: TaskGroups.q1,
+        taskGroup: q1,
         createdOn: new Date()
     },
     {
@@ -107,7 +109,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: TaskGroups.q2,
+        taskGroup: q2,
         createdOn: new Date()
     },
     {
@@ -116,7 +118,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 1,
-        taskGroup: TaskGroups.q3,
+        taskGroup: q3,
         createdOn: new Date()
     },
     {
@@ -125,7 +127,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 2,
-        taskGroup: TaskGroups.q3,
+        taskGroup: q3,
         createdOn: new Date()
     },
     {
@@ -134,7 +136,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 3,
-        taskGroup: TaskGroups.q3,
+        taskGroup: q3,
         createdOn: new Date()
     },
     {
@@ -143,7 +145,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 4,
-        taskGroup: TaskGroups.q3,
+        taskGroup: q3,
         createdOn: new Date()
     },
     {
@@ -152,7 +154,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: TaskGroups.q4,
+        taskGroup: q4,
         createdOn: new Date()
     },
     {
@@ -161,7 +163,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 6,
-        taskGroup: TaskGroups.q4,
+        taskGroup: q4,
         createdOn: new Date()
     },
     {
@@ -170,7 +172,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 7,
-        taskGroup: TaskGroups.q4,
+        taskGroup: q4,
         createdOn: new Date()
     },
     {
@@ -179,7 +181,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 8,
-        taskGroup: TaskGroups.q4,
+        taskGroup: q4,
         createdOn: new Date()
     },
     {
@@ -188,7 +190,7 @@ let tasks = [
         estimate: 30,
         label: "React & Node",
         order: 5,
-        taskGroup: TaskGroups.q2,
+        taskGroup: q2,
         createdOn: new Date()
     },
 ];
